@@ -81,7 +81,7 @@
         * Says specifically working with __tablename__ model
         * Create is the same thing as insert 
     * ### Find all:
-     db.__tablename__.findAll().then(foundUser=> {})
+     db.__tablename__.findAll().then(foundUsers=> {})
 
     * ### Find specific:
      db.__tablename__.findOne({
@@ -218,7 +218,24 @@ Refer to my-personal-express folder
         * First parameter is the file that denotes the path of where the file has to be written
         * Second parameter is what will be written to the file 
 
+### Axios: 
+* Used to perform HTTP requests that work in both browser and node.js
+* way to handle HTTP requests from Node using promises
+* How to use: 
+    * Install: npm i axios
+    * Require it: 
+        *  const axios= require('axios');
+    * Write a get route:
+        * Syntax: axios.get(‘__url__’).then(response=> {}).catch(err)
+            * The .then will return a response object 
+            * Include a .catch() to pick up errors
+* Response object: we send a request to a server, it returns a response 
+    * Axios response object consists of:
+        * data: payload returned from server
+        * status: the HTTP code returned from server
+        * statusText: HTTP code returned from server
+        * headers: headers sent by server 
+        * config: the original request configuration
+        * request: the request object 
+    * Access these by: response.______
 
-
-## what to add:
-* axios 
